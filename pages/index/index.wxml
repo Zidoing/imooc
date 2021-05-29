@@ -28,3 +28,20 @@
     </view>
 
 </view>
+
+<swiper
+        previous-margin="18rpx"
+        next-margin="18rpx"
+        circular="{{true}}"
+        autoplay="{{true}}"
+>
+    <swiper-item class="swiper-item">
+        <image class="swiper-img" src="//img.mukewang.com/60989bfd098afd8418000600.png"></image>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+        <image class="swiper-img" src="http://img.mukewang.com/6063d4be092d9b9418000600.png"></image>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+        <image class="swiper-img" src="http://img.mukewang.com/6063d4be092d9b9418000600.png"></image>
+    </swiper-item>
+</swiper>
