@@ -85,3 +85,17 @@
     line-height: 32rpx;
     font-weight: bold;
 }
+
+.project-item {
+    display: flex;
+}
+
+.project-item-pic {
+    width: 208rpx;
+    height: 136rpx;
+}
+
+.project-item-content {
+    flex: 1;
+}
+
