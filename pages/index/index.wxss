@@ -69,3 +69,19 @@
     height: 232rpx;
     border-radius: 12rpx;
 }
+
+.swiper {
+    height: 234rpx;
+}
+
+.project {
+    margin-top: 32rpx;
+    margin-left: 40rpx;
+}
+
+.project-title {
+    font-size: 28rpx;
+    color: #2b333b;
+    line-height: 32rpx;
+    font-weight: bold;
+}
