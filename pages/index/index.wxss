@@ -101,6 +101,7 @@
     flex: 1;
     margin-left: 24rpx;
     margin-right: 40rpx;
+    padding-bottom: 28rpx;
     border-bottom: 1rpx solid #d9dde1;
 }
 
@@ -117,8 +118,9 @@
     line-height: 32rpx;
 }
 
-.project-item-tags text {
-    margin-right: 36rpx;
+.project-item-tags view {
+    float: left;
+    margin-right: 30rpx;
 }
 
 .project-item-text {
@@ -150,4 +152,10 @@
     position: relative;
     top: 0rpx;
     left: 4rpx;
+}
+
+.project-empty {
+    font-size: 24rpx;
+    margin-top: 20rpx;
+    text-align: center;
 }

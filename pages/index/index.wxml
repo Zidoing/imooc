@@ -9,62 +9,56 @@
 </view>
 
 <view class="navigator">
-    <view class="navigator-item">
-        <image class="navigator-img" src="../../resources/recommend.png"></image>
-        推荐
-        <view class="navigator-active"></view>
-    </view>
-    <view class="navigator-item">
-        <image class="navigator-img" src="../../resources/path.png"></image>
-        路径
-    </view>
-    <view class="navigator-item">
-        <image class="navigator-img" src="../../resources/project.png"></image>
-        实战
-    </view>
-    <view class="navigator-item">
-        <image class="navigator-img" src="../../resources/activity.png"></image>
-        活动
+    <view class="navigator-item"
+          wx:for="{{tabs}}"
+          wx:key="index"
+          wx:for-index="index"
+          data-type="{{item.type}}"
+          bind:tap="changeType">
+        <image class="navigator-img" src="../../resources/{{item.type}}.png"></image>
+        {{item.name}}
+        <view class="navigator-active navigator-active-{{item.type}}"
+              hidden="{{type !== item.type}}">
+        </view>
     </view>
 
 </view>
 
-<swiper
-        previous-margin="18rpx"
-        next-margin="18rpx"
-        circular="{{true}}"
-        autoplay="{{true}}"
-        class="swiper"
->
-    <swiper-item class="swiper-item">
-        <image class="swiper-img" src="//img.mukewang.com/60989bfd098afd8418000600.png"></image>
-    </swiper-item>
-    <swiper-item class="swiper-item">
-        <image class="swiper-img" src="http://img.mukewang.com/6063d4be092d9b9418000600.png"></image>
-    </swiper-item>
-    <swiper-item class="swiper-item">
-        <image class="swiper-img" src="http://img.mukewang.com/6063d4be092d9b9418000600.png"></image>
-    </swiper-item>
-</swiper>
+<block wx:if="{{type === 'recommend'}}">
+    <swiper
+            previous-margin="18rpx"
+            next-margin="18rpx"
+            circular="{{true}}"
+            autoplay="{{true}}"
+            class="swiper"
+    >
+        <swiper-item wx:for="{{swiperList}}" wx:key="index" wx:for-index="index" class="swiper-item">
+            <image class="swiper-img" src="{{item.imgUrl}}"></image>
+        </swiper-item>
+    </swiper>
 
-<view class="project">
-    <view class="project-title">实战推荐</view>
-    <view class="project-item">
-        <image class="project-item-pic" src="https://img1.mukewang.com/szimg/5ac2dfe100014a9005400300.jpg"></image>
-        <view class="project-item-content">
-            <view class="project-item-title">
-                微信小程序入门与实战常用组件 开发技巧api 项目实战
-            </view>
-            <view class="project-item-tags">
-                <text class="project-item-text">$198</text>
-                <text class="project-item-price-active">$198</text>
-                <text class="project-item-notice">App购买立减 $3</text>
-                <text class="project-item-text">App购买立减 $3</text>
-                <view class="project-item-user">
-                    <image class="project-item-icon" src="../../resources/user.png"></image> 2892
+    <view class="project">
+        <view class="project-title">实战推荐</view>
+        <view class="project-empty" hidden="{{!(searchList && searchList.length == 0)}}">无搜索结果</view>
+        <view class="project-item" wx:for="{{searchList? searchList:courses}}" wx:key="index" wx:for-index="index">
+            <image class="project-item-pic" src="{{item.imgUrl}}"></image>
+            <view class="project-item-content">
+                <view class="project-item-title">{{item.title}}</view>
+                <view class="project-item-tags">
+                    <view class="project-item-price-active" wx:if="{{item.promotion}}">${{item.price}}</view>
+                    <view class="project-item-text" wx:else>${{item.price}}</view>
+                    <view class="project-item-notice" wx:if="{{item.notice}}">{{item.notice}}</view>
+                    <view class="project-item-text">{{item.level}}</view>
+                    <view class="project-item-user">
+                        <image class="project-item-icon" src="../../resources/user.png"></image>
+                        {{item.sales}}
+                    </view>
                 </view>
             </view>
         </view>
     </view>
-</view>
+</block>
 
+<block wx:if="{{type === 'activity'}}">
+    活动内容
+</block>
