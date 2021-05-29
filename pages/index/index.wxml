@@ -51,19 +51,17 @@
     <view class="project-title">实战推荐</view>
     <view class="project-item">
         <image class="project-item-pic" src="https://img1.mukewang.com/szimg/5ac2dfe100014a9005400300.jpg"></image>
-        <view>
-            <view class="project-item-content">
-                <view class="project-item-title">
-                    微信小程序入门与实战常用组件 开发技巧api 项目实战
-                </view>
-                <view class="project-item-tags">
-                    <text class="project-item-price-active">$198</text>
-                    <text class="project-item-price-active">$198</text>
-                    <text class="project-item-notice">App购买立减 $3</text>
-                    <text class="project-item-text">App购买立减 $3</text>
-                    <text>
-                        <image class="project-item-user" src="../../resources/user.png"></image>
-                    </text>
+        <view class="project-item-content">
+            <view class="project-item-title">
+                微信小程序入门与实战常用组件 开发技巧api 项目实战
+            </view>
+            <view class="project-item-tags">
+                <text class="project-item-text">$198</text>
+                <text class="project-item-price-active">$198</text>
+                <text class="project-item-notice">App购买立减 $3</text>
+                <text class="project-item-text">App购买立减 $3</text>
+                <view class="project-item-user">
+                    <image class="project-item-icon" src="../../resources/user.png"></image> 2892
                 </view>
             </view>
         </view>

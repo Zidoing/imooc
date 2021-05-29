@@ -88,14 +88,66 @@
 
 .project-item {
     display: flex;
+    margin-top: 16rpx;
 }
 
 .project-item-pic {
     width: 208rpx;
     height: 136rpx;
+    border-radius: 12rpx;
 }
 
 .project-item-content {
     flex: 1;
+    margin-left: 24rpx;
+    margin-right: 40rpx;
+    border-bottom: 1rpx solid #d9dde1;
 }
 
+.project-item-title {
+    font-size: 32rpx;
+    color: #2b333b;
+    line-height: 40rpx;
+    font-weight: bold;
+}
+
+.project-item-tags {
+    margin-top: 12rpx;
+    font-size: 24rpx;
+    line-height: 32rpx;
+}
+
+.project-item-tags text {
+    margin-right: 36rpx;
+}
+
+.project-item-text {
+    color: #71777d;
+}
+
+.project-item-price-active {
+    color: #f01414;
+    font-weight: bold;
+}
+
+.project-item-notice {
+    background-color: rgba(242, 13, 13, 0.10);
+    border-radius: 4rpx;
+    font-size: 20rpx;
+    line-height: 32rpx;
+    color: #f20d0d;
+}
+
+.project-item-user {
+    line-height: 32rpx;
+    color: #71777d;
+    font-style: 24rpx;
+}
+
+.project-item-icon {
+    width: 20rpx;
+    height: 20rpx;
+    position: relative;
+    top: 0rpx;
+    left: 4rpx;
+}
