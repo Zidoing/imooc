@@ -12,7 +12,7 @@
     </swiper>
 
     <view class="project">
-        <view class="project-title">实战推荐</view>
+        <view class="project-title" bind:tap="handleRecommendTap">实战推荐</view>
         <view class="project-empty" hidden="{{!(searchList && searchList.length == 0)}}">无搜索结果</view>
         <view class="project-item" wx:for="{{searchList? searchList:courses}}" wx:key="index" wx:for-index="index">
             <image class="project-item-pic" src="{{item.imgUrl}}"></image>

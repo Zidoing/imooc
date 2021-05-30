@@ -57,6 +57,11 @@ Page({
     changeType(e) {
         const type = e.currentTarget.dataset.type;
         this.setData({type});
+    },
+    handleRecommendTap() {
+        wx.navigateTo({
+            url: "/pages/hot/hot"
+        })
     }
 
 
