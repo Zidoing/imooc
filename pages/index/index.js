@@ -14,7 +14,8 @@ Page({
             {name: "路径", type: "path"},
             {name: "实战", type: "project"},
             {name: "活动", type: "activity"},
-        ]
+        ],
+        activity: []
     },
 
     handleInputChange(e) {
@@ -42,10 +43,12 @@ Page({
                 url: "https://www.fastmock.site/mock/7b84fef3e3467bc1457dc7fff158c5a7/weixin/api/getData",
                 success: (res) => {
                     const {data: {data}} = res
-                    const {swiperList, courses} = data
+                    const {swiperList, courses, activity} = data
+                    console.log(activity)
                     this.setData({
                         swiperList,
-                        courses
+                        courses,
+                        activity
                     })
                 }
             }

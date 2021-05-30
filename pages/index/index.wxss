@@ -159,3 +159,10 @@
     margin-top: 20rpx;
     text-align: center;
 }
+
+.activity-item {
+    width: 702rpx;
+    height: 232rpx;
+    margin: 0 auto 32rpx auto;
+    border-radius: 12rpx;
+}
