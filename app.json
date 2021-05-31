@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/hot/hot",
     "pages/index/index",
-    "pages/person/person",
-    "pages/hot/hot"
+    "pages/person/person"
   ],
   "window": {
     "backgroundTextStyle": "light",
