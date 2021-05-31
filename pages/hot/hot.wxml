@@ -12,6 +12,7 @@
 
 <view class="time">
     <view wx:for="{{rankPeriods}}"
+          wx:key="value"
           data-type="{{item.value}}"
           bind:tap="handlePeriodChange"
           class="period {{rankPeriod === item.value ? 'period-active' : ''}}">
@@ -20,15 +21,21 @@
 </view>
 
 <view class="list">
-    <view class="item">
-        <image class="item-image" src="https://img1.mukewang.com/szimg/5f1eafb709e18bf912000676.png"></image>
+    <view class="item"
+          wx:for="{{currentList}}"
+          wx:key="index"
+          wx:for-index="index"
+    >
+        <image class="item-image" src="{{item.imgUrl}}"></image>
         <view class="item-title">
             <view class="item-title-inner">
-                ios页面传值
+                {{item.title}}
             </view>
         </view>
         <view class="item-number">
-            <image class="item-number-img" src="../../resources/first.png"></image>
+            <image wx:if="{{index === 0 }}" class="item-number-img" src="../../resources/first.png"></image>
+            <image wx:elif="{{index === 1 }}" class="item-number-img" src="../../resources/second.png"></image>
+            <image wx:elif="{{index === 2 }}" class="item-number-img" src="../../resources/third.png"></image>
         </view>
     </view>
 </view>

@@ -9,6 +9,13 @@ Page({
         rankPeriods: [
             {title: '周', value: 'week'},
             {title: '月', value: 'month'},
+        ],
+        currentList: [
+            {imgUrl: "https://img1.mukewang.com/szimg/5f1eafb709e18bf912000676.png", title: "iso页面传智"},
+            {imgUrl: "https://img1.mukewang.com/szimg/5f1eafb709e18bf912000676.png", title: "iso页面传智"},
+            {imgUrl: "https://img1.mukewang.com/szimg/5f1eafb709e18bf912000676.png", title: "iso页面传智"},
+            {imgUrl: "https://img1.mukewang.com/szimg/5f1eafb709e18bf912000676.png", title: "iso页面传智"},
+            {imgUrl: "https://img1.mukewang.com/szimg/5f1eafb709e18bf912000676.png", title: "iso页面传智"},
         ]
     },
     handleTabChange(e) {
